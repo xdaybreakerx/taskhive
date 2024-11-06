@@ -44,6 +44,21 @@ async function userSignUp(request, response) {
     }
 }
 
+async function userLogin(request, response) {
+    try {
+        response.status(200).json({
+            message: 'Logged in successfully.',
+        });
+    } catch (error) {
+        // Handle any other error
+        return response.status(500).json({
+            message: 'An error occurred during login. Please try again later.',
+            error: error.message,
+        });
+    }
+}
+
 module.exports = {
     userSignUp,
+    userLogin,
 };
