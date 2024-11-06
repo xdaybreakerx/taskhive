@@ -9,8 +9,28 @@ const options = {
             version: '1.0.0',
             description: 'A simple Express API with Swagger documentation',
         },
+        servers: [
+            {
+                url: 'http://localhost:8080',
+                description: 'Local server',
+            },
+        ],
+        components: {
+            securitySchemes: {
+                bearerAuth: {
+                    type: 'http',
+                    scheme: 'bearer',
+                    bearerFormat: 'JWT',
+                },
+            },
+        },
+        security: [
+            {
+                bearerAuth: [],
+            },
+        ],
     },
-    apis: ['./routes/*.js'],
+    apis: [__dirname + '/routes/*.js'], // Using absolute path to routes as relative broke
 };
 
 const specs = swaggerJsdoc(options);
