@@ -4,7 +4,7 @@ const app = express();
 
 app.use(express.json());
 
-app.get('/', (response) => {
+app.get('/', (request, response) => {
     response.json({
         message: 'Hello, world!',
     });
