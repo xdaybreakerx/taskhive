@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-const { dbConnect } = require('./functions/dbFunctions.js');
+const { dbConnect } = require('./db/dbFunctions.js');
 
 const { app } = require('./server.js');
 
