@@ -14,6 +14,11 @@ const UserSchema = new mongoose.Schema({
         minLength: 8,
         trim: true,
     },
+    role: {
+        type: String,
+        enum: ['Admin', 'ProjectManager', 'TeamMember'], // possible roles
+        default: 'TeamMember',
+    },
 });
 
 const User = mongoose.model('User', UserSchema);
