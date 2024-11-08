@@ -35,6 +35,9 @@ Asked ChatGPT 4o to give me a list of features to implement with user stories an
 
 ### Proposed Stretch Features
 
+<details>
+<summary>click here for the proposed stretch features list</summary>
+
 1. Sprint and Milestone Management
     - Sprint Creation: Track tasks within sprints for agile project management.
     - Milestones: Add milestones and associate tasks with specific milestones for better tracking.
@@ -50,3 +53,5 @@ Asked ChatGPT 4o to give me a list of features to implement with user stories an
 5. Webhooks and Integrations
     - Third-Party Integration: Add integrations with tools like Slack, email, or calendar systems for seamless workflows.
     - Webhooks: Allow project managers to set up webhooks to notify external services of specific events, like status changes.
+
+</details>
