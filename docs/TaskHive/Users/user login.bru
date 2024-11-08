@@ -6,10 +6,13 @@ meta {
 
 get {
   url: http://localhost:8080/users/login
-  body: none
+  body: json
   auth: none
 }
 
-headers {
-  jwt: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzJiNTNjNWFjNDQzYTExZTk5YWE4ZjAiLCJ1c2VybmFtZSI6InVzZXJuYW1lIiwicm9sZXMiOm51bGwsImlhdCI6MTczMDg5Mjc0MSwiZXhwIjoxNzMxNDk3NTQxfQ.K79IUCt9iTcCJLXPhp1xbrS4s11zC8J68S7jEP29iDY
+body:json {
+  {
+    "username": "adminUser",
+    "password": "password123"
+  }
 }
