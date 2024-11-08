@@ -1,10 +1,10 @@
-// Provide CRUD functions for the UserModel
+// Provide CRUD functions for the User
 
-const { UserModel } = require('../models/userModel');
+const { User } = require('../models/userModel');
 
 // Create a new user
 async function createUser(username, password, role) {
-    let result = await UserModel.create({
+    let result = await User.create({
         username: username,
         password: password,
         role: role,
@@ -14,19 +14,19 @@ async function createUser(username, password, role) {
 
 // Find a single user by query
 async function findOneUser(query) {
-    let result = await UserModel.findOne(query);
+    let result = await User.findOne(query);
     return result;
 }
 
 // Find multiple users by query
 async function findManyUsers(query) {
-    let result = await UserModel.find(query);
+    let result = await User.find(query);
     return result;
 }
 
 // Update a single user by query
 async function updateOneUser(query, updateData) {
-    let result = await UserModel.findOneAndUpdate(query, updateData, {
+    let result = await User.findOneAndUpdate(query, updateData, {
         new: true, // Return the updated document
         runValidators: true,
     });
@@ -35,7 +35,7 @@ async function updateOneUser(query, updateData) {
 
 // Update multiple users by query
 async function updateManyUsers(query, updateData) {
-    let result = await UserModel.updateMany(query, updateData, {
+    let result = await User.updateMany(query, updateData, {
         runValidators: true,
     });
     return result;
@@ -43,13 +43,13 @@ async function updateManyUsers(query, updateData) {
 
 // Delete a single user by query
 async function deleteOneUser(query) {
-    let result = await UserModel.findOneAndDelete(query);
+    let result = await User.findOneAndDelete(query);
     return result;
 }
 
 // Delete multiple users by query
 async function deleteManyUsers(query) {
-    let result = await UserModel.deleteMany(query);
+    let result = await User.deleteMany(query);
     return result;
 }
 
