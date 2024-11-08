@@ -7,7 +7,10 @@
     "test": "jest",
     "start": "node src/index.js",
     "dev": "nodemon src/index.js",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "db:seed": "node src/db/seed.js",
+    "db:drop": "node src/db/drop.js",
+    "db:drop-and-seed": "npm run db:drop && npm run db:seed"
   },
   "keywords": [],
   "author": "",

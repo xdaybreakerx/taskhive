@@ -1,5 +1,5 @@
 const { dbConnect } = require('./dbFunctions');
-const { UserModel } = require('../models/userModel');
+const { User } = require('../models/userModel');
 
 require('dotenv').config();
 
@@ -25,7 +25,7 @@ async function seed() {
         ];
 
         // Insert users into the database
-        await UserModel.insertMany(users);
+        await User.insertMany(users);
         console.log(
             'Users with roles Admin, ProjectManager, and TeamMember created successfully.'
         );
