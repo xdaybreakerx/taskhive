@@ -13,6 +13,16 @@ async function dbConnect() {
     }
 }
 
+async function dbDisconnect() {
+    await mongoose.connection.close();
+}
+
+async function dbDrop() {
+    await mongoose.connection.db.dropDatabase();
+}
+
 module.exports = {
     dbConnect,
+    dbDisconnect,
+    dbDrop,
 };
